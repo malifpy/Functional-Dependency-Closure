@@ -34,5 +34,5 @@ csStr set = Set.foldl (\x y -> if x == "" then y else x ++ ", " ++ y) "" set
 
 putFD :: Foldable t => t (Set.Set [Char], Set.Set [Char]) -> IO ()
 putFD fd = mapM_ (\x -> putStrLn (fStr x)) fd 
-    where fStr x = "{" ++ csStr (fst x) ++ "} --> {" ++ csStr (snd x) ++ "}"
+    where fStr x = "{" ++ csStr (fst x) ++ "} -> {" ++ csStr (snd x) ++ "}"
 
